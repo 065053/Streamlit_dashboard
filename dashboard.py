@@ -8,7 +8,7 @@ import io
 import gdown
 
 # Load data from Google Drive
-url = "https://drive.google.com/file/d/1mEe7-GM94f67ybcoz9F9YOlQ_yW7iO-z/view?usp=drive_link"
+url = f"https://drive.google.com/file/d/1mEe7-GM94f67ybcoz9F9YOlQ_yW7iO-z/view?usp=drive_link"
 
 output = "new_retail_data.csv"
 gdown.download(url, output, quiet=False, fuzzy=True)
@@ -456,4 +456,5 @@ chart = alt.Chart(melted_income_stats).mark_bar(size=35).encode(
     step=5
 ).interactive()
 st.header('Average Ratings, Feedback Number, Total Purchases, and Age by Income (Altair)')
+
 st.altair_chart(chart, use_container_width=True)
